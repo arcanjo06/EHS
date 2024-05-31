@@ -11,3 +11,12 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+function toggleMenu() {
+    var sidebar = document.getElementById("sidebar");
+    if (sidebar.style.display === "flex") {
+        sidebar.style.display = "none";
+    } else {
+        sidebar.style.display = "flex";
+    }
+}
