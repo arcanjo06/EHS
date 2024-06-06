@@ -25,17 +25,23 @@
             line-height: 20px;
             color: white;
         }
-        .progress-box{
+        .little-box{
             width: 40%;
             height: 60vh;
             margin: 1vw;
-            background-image: linear-gradient(to right,rgb(228, 227, 227),rgb(221, 221, 221),rgb(219, 218, 218));
+            background-image: linear-gradient(to right,rgb(228, 225, 225),rgb(212, 212, 212),rgb(240, 238, 238));
             box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
             border-radius: 5px;
-            padding: 10px;
+            padding: 1%;
         }
-        .progress-box h1{
+        .little-box>h1{
+            font-size: 3vw;
             color: black;
+        }
+        .big-box{
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
     </style>
@@ -47,7 +53,7 @@
             <span class="button-container">
                 <a href="/conteudos.html"><button class="header-button"><img src="/images/content.png" width="60px" height="60px">Conteúdos</button></a>
                 <a href="/professor.html"><button class="header-button"><img src="/images/teacher.png" width="60px" height="60px" >Professor</button></a>
-                <a href="/quemsomos.html"><button class="header-button"><img src="/images/quemsomos.png" width="60px" height="60px" >Quem Somos</button></a>
+                <a href="/quemsomos.html"><button class="header-button"><img src="/images/quemsomos.png" width="70px" height="70px" >Quem Somos</button></a>
                     <span class="user">
                 <a href="/user.html"><button><img src="/images/user.png" width="70px" height="80px" >
                     User</button></a>
@@ -56,9 +62,10 @@
             </header>
     
     <div class="box">
-        <h1>Bem-vindo Estudante</h1>
+        <h1>Bem-vindo Estudante!!</h1>
 <br><br><br><br>
-        <div class="progress-box">
+<div class="big-box">
+        <div class="little-box">
             <h1>Status do Aluno</h1>
             <br><br><br><br>
         <div class="content">
@@ -75,7 +82,19 @@
                 </div>
             </div>
         </div>
+        <div class="little-box">
+            <h1>Assuntos Favoritados</h1>
+            <br><br><br><br>
+        <div class="content">
+            <h2>&#11088;Curso em Video-Python</h2>
+            <h2>&#11088;Dev Aprender-Lógica de Programação</h2>
+            
+        </div>
+        </div>
     </div>
+    </div>
+</div>
+    
     
     <script src="script.js"></script>
 </body>
