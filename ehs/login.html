@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro EHS</title>
+    <link rel="stylesheet" href="login.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, max-scale=1.0">
+</head>
+
+<body>
+    <header>
+        <img id="logo" src="/images/logo.png">
+            <h2 id="title">Education High Sphere</h2>
+            <span class="button-container">
+                    <span class="user">
+                <a href="/user.html"><button><img src="/images/user.png" width="70px" height="80px" >
+                    User</button></a>
+                </span>
+            </span>
+    </header>
+
+    <div class="box">
+
+
+        <fieldset>
+
+            <legend><b>CADASTRE-SE!</b></legend>
+            <br>
+
+            <div class="inputBox">
+
+                <input type="text" name="nome" class="inputUser" required>
+                <label for="nome" class="labelInput">Nome completo</label>
+
+            </div>
+
+            <br><br>
+
+            <div class="inputBox">
+
+                <input type="text" name="email" class="inputUser" required>
+                <label for="email" class="labelInput">Email</label>
+
+            </div>
+
+            <br><br>
+
+            <div class="inputBox">
+
+                <input type="password" name="senha" class="inputUser" required>
+                <label for="senha" class="labelInput">Senha</label>
+
+            </div>
+
+            <br><br>
+
+            <div class="inputBox">
+
+                <input type="tel" name="telefone" class="inputUser" required>
+                <label for="telefone" class="labelInput">Telefone</label>
+
+            </div>
+
+            <br>
+
+            <p> <b>Sexo:</b> </p>
+
+            <input type="radio" name="genero" value="feminino" required>
+            <label for="feminino">Feminino</label>
+
+            <br>
+
+            <input type="radio" name="genero" value="masculino" required>
+            <label for="masculino">Masculino</label>
+
+            <br><br><br>
+
+            <label for="data_nascimento"> <b>Data de Nascimento: </b></label>
+            <br>
+            <input type="date" name="data_nascimento" id="data_nascimento" required>
+                
+            <br>
+
+            <p> <b>Patente:</b></p>
+
+            <input type="radio" name="patente" value="Professor" required>
+            <label for="professor">Professor</label>
+
+            <br>
+
+            <input type="radio" name="patente" value="aluno" required>
+            <label for="aluno">Aluno</label>
+
+
+            <br><br><br><br>                                
+
+
+            <button type="submit" name="submit" id="submit"><a href="conteudos.html">L O G I N</a></button>
+
+        </fieldset>
+
+    </div>
+
+    <div class="video">
+
+        <fieldset class="ffield">
+
+            <legend class="flegend">Assista e saiba mais!</legend>
+
+        </fieldset>
+
+
+    </div>
+
+</body>
+</html>

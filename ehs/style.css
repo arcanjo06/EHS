@@ -44,7 +44,8 @@ header{
     align-items: center;
 }
 .header-button{
-    background-color: white;
+    background-color: rgb(255, 255, 255);
+    filter: invert(100%);
     min-height: 11vh;
     min-width: 65px;
     width: 5vw;
@@ -52,12 +53,12 @@ header{
     max-height: 100%;
     margin: 5px;
     border-radius: 5px;
-    font-size: 0.8vw 0.8vh;
+    font-size: 0.7vw;
     font-family: 'Lucida Grande';
 }
 .header-button:hover{
     cursor: pointer;
-    background-color: rgb(241, 241, 241);
+    background-color: rgb(189, 188, 188);
 }
 .user{
     margin-left: auto;
@@ -68,6 +69,7 @@ header{
 
 .user button{
     background-color: white;
+    filter: invert(100%);
     font-size:1.1vw;
     min-width: 95px;
     height: 13vh;
@@ -79,7 +81,7 @@ header{
 }
 .user button:hover{
     cursor: pointer;
-    background-color: rgb(241, 241, 241);
+    background-color: rgb(189, 188, 188);
 }
 
 .box{
