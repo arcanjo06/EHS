@@ -6,13 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro EHS</title>
     <link rel="stylesheet" href="login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, max-scale=1.0">
 </head>
 
 <body>
     <header>
         <img id="logo" src="/images/logo.png">
-            <h2 id="title">Education High Sphere</h2>
+            <h2 id="title">EHSYNC</h2>
             <span class="button-container">
                     <span class="user">
                 <a href="/user.html"><button><img src="/images/user.png" width="70px" height="80px" >
@@ -29,77 +30,29 @@
             <legend><b>CADASTRE-SE!</b></legend>
             <br>
 
-            <div class="inputBox">
-
-                <input type="text" name="nome" class="inputUser" required>
-                <label for="nome" class="labelInput">Nome completo</label>
-
+            <div class="main">  	
+                <input type="checkbox" id="chk" aria-hidden="true">
+        
+                    <div class="signup">
+                        <form>
+                            <label for="chk" aria-hidden="true">Sign up</label>
+                            <input type="text" name="txt" placeholder="User name" required="">
+                            <input type="email" name="email" placeholder="Email" required="">
+                            <input type="date" name="data_nascimento" placeholder="" required="">
+                            <input type="password" name="pswd" placeholder="Password" required="">
+                            <button>Sign up</button>
+                        </form>
+                    </div>
+        
+                    <div class="login">
+                        <form>
+                            <label for="chk" aria-hidden="true">Login</label>
+                            <input type="email" name="email" placeholder="Email" required="">
+                            <input type="password" name="pswd" placeholder="Password" required="">
+                            <button>Login</button>
+                        </form>
+                    </div>
             </div>
-
-            <br><br>
-
-            <div class="inputBox">
-
-                <input type="text" name="email" class="inputUser" required>
-                <label for="email" class="labelInput">Email</label>
-
-            </div>
-
-            <br><br>
-
-            <div class="inputBox">
-
-                <input type="password" name="senha" class="inputUser" required>
-                <label for="senha" class="labelInput">Senha</label>
-
-            </div>
-
-            <br><br>
-
-            <div class="inputBox">
-
-                <input type="tel" name="telefone" class="inputUser" required>
-                <label for="telefone" class="labelInput">Telefone</label>
-
-            </div>
-
-            <br>
-
-            <p> <b>Sexo:</b> </p>
-
-            <input type="radio" name="genero" value="feminino" required>
-            <label for="feminino">Feminino</label>
-
-            <br>
-
-            <input type="radio" name="genero" value="masculino" required>
-            <label for="masculino">Masculino</label>
-
-            <br><br><br>
-
-            <label for="data_nascimento"> <b>Data de Nascimento: </b></label>
-            <br>
-            <input type="date" name="data_nascimento" id="data_nascimento" required>
-                
-            <br>
-
-            <p> <b>Patente:</b></p>
-
-            <input type="radio" name="patente" value="Professor" required>
-            <label for="professor">Professor</label>
-
-            <br>
-
-            <input type="radio" name="patente" value="aluno" required>
-            <label for="aluno">Aluno</label>
-
-
-            <br><br><br><br>                                
-
-
-            <button type="submit" name="submit" id="submit"><a href="conteudos.html">L O G I N</a></button>
-
-        </fieldset>
 
     </div>
 
@@ -113,6 +66,24 @@
 
 
     </div>
+    <script>
+        const signInBtn = document.getElementById('signInBtn');
+        const signUpBtn = document.getElementById('signUpBtn');
+        const signInForm = document.getElementById('signinForm');
+        const signUpForm = document.getElementById('signupForm');
+
+        // Show Sign In form and hide Sign Up form
+        signInBtn.addEventListener('click', () => {
+            signInForm.classList.remove('hidden');
+            signUpForm.classList.add('hidden');
+        });
+
+        // Show Sign Up form and hide Sign In form
+        signUpBtn.addEventListener('click', () => {
+            signUpForm.classList.remove('hidden');
+            signInForm.classList.add('hidden');
+        });
+    </script>
 
 </body>
 </html>
