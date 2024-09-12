@@ -5,20 +5,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quem Somos</title>
+    <style>
+           ::-webkit-scrollbar {
+            width: 10px; /* Largura da barra vertical */
+            height: 10px; /* Altura da barra horizontal */
+        }
+
+        /* Estiliza o fundo da barra de rolagem */
+        ::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.6);/* Cor do fundo da barra */
+        }
+
+        /* Estiliza a parte de rolagem da barra */
+        ::-webkit-scrollbar-thumb {
+            background: blue; /* Cor da parte rolável */
+        }
+
+        /* Estiliza a parte de rolagem ao passar o mouse */
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555; /* Cor ao passar o mouse */
+        }
+
+    </style>
 </head>
 <body>
     <header>
-        <img id="logo" src="/images/logo.png" alt="">
-            <h2 id="title">EHSYNC</h2>
+        <span class="ini">
+        <img id="logo" src="images/logo.png" alt="">
+            <a href="#" id="title">EHSYNC</a>
+        </span>
             <span class="button-container">
-                <a href="/conteudos.html"><button class="header-button"><img src="/images/content.png" width="60px" height="60px">Conteúdos</button></a>
-                <a href="/professor.html"><button class="header-button"><img src="/images/teacher.png" width="60px" height="60px" >Professor</button></a>
-                <a href="/quemsomos.html"><button class="header-button"><img src="/images/quemsomos.png" width="70px" height="70px" >Quem Somos</button></a>
+                <a href="conteudos.html"><button class="header-button"><img src="images/content.png" width="60px" height="60px">Conteúdos</button></a>
+                <a href="professor.html"><button class="header-button"><img src="images/teacher.png" width="60px" height="60px" >Professor</button></a>
+                <a href="quemsomos.html"><button class="header-button"><img src="images/quemsomos.png" width="70px" height="70px" >Quem Somos</button></a>
                     <span class="user">
-                <a href="/user.html"><button><img src="/images/user.png" width="70px" height="80px" >
+                <a href="user.php"><button><img src="images/user.png" width="70px" height="80px" >
                     User</button></a>
                 </span>
             </span>
+            <div class="menu-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="dropdown-menu">
+                <a href="conteudos.html"><button class="header-button"><img src="images/content.png" width="60px" height="60px">Conteúdos</button></a>
+                <a href="professor.html"><button class="header-button"><img src="images/teacher.png" width="60px" height="60px" >Professor</button></a>
+                <a href="quemsomos.html"><button class="header-button"><img src="images/quemsomos.png" width="70px" height="70px" >EHS</button></a>
+                    <span class="user">
+                <a href="user.php"><button><img src="images/user.png" width="70px" height="80px" >
+                    User</button></a>
+            </div>
             </header>
 
     <div class="box">
@@ -35,6 +73,6 @@
 
 
 
-    <script src="/script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

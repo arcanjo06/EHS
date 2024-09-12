@@ -1,199 +1,316 @@
-*{
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
-@keyframes surgir {
-    from {
-      opacity: 0; /* Comece com opacidade 0 (invisível) */
-      transform: translateX(100%); /* Comece fora da tela à direita */
-    }
-    to {
-      opacity: 1; /* Termine com opacidade 1 (totalmente visível) */
-      transform: translateX(0); /* Termine na posição inicial (0 pixels da esquerda) */
-    }
-  }
-header{
+
+body {
+    background-color: #00132d;
+    font-family: 'Lucida Grande', sans-serif;
+}
+
+header {
     overflow: hidden;
     top: 0;
     left: 0;
     background-color: #000706;
-    display:flex;
-    justify-content: space-evenly;
-    align-content: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     height: 15vh;
     border: 2px solid black;
+    padding: 0 20px;
 }
-
-#title{
-    font-size: 2vw;
-    text-transform: uppercase;
-    color:#f4f6fc;
-    margin-top: auto;
-    margin-bottom: auto;
-}
-#logo{
-    margin-left: 20px;
-    margin-right: 30px;
-    justify-self: start;
-    object-fit: cover;
-    width: 7%;
-}
-.button-container{
+.ini{
     display: flex;
-    margin-left: auto;
-    margin-top: auto;
-    margin-bottom: auto;
     align-items: center;
 }
-.header-button{
-    background-color: #f4f6fc;
-    min-height: 11vh;
-    min-width: 65px;
-    width: 5vw;
-    max-width: 100%;
-    max-height: 100%;
-    margin: 5px;
-    border-radius: 5px;
-    font-size: 0.7vw;
-    font-family: 'Lucida Grande';
-}
-.header-button:hover{
+/* Estilos do menu hambúrguer */
+.menu-hamburger {
+    display: none;
+    flex-direction: column;
     cursor: pointer;
-    background-color: rgb(189, 188, 188);
-}
-.user{
-    margin-left: auto;
-    margin-top: auto;
-    margin-bottom: auto;
-    padding: 10px; 
 }
 
-.user button{
+.menu-hamburger span {
+    width: 25px;
+    height: 3px;
     background-color: #f4f6fc;
-    font-size:1.1vw;
-    min-width: 95px;
-    height: 13vh;
-    width: 6vw;
-    margin-top: auto;
-    margin-bottom: auto;
-    flex-wrap: wrap;
-    border-radius: 50%;
-}
-.user button:hover{
-    cursor: pointer;
-    background-color: rgb(189, 188, 188);
+    margin: 4px;
+    transition: all 0.3s ease;
 }
 
-.box{
-    margin-top: 20px;
-    border: 2px solid black;
-    border-radius: 5px;
-    background-color: #f4f6fc;
-    margin-left:auto;
-    margin-right:auto;
-    font-size:1vw;
-    height: 83vh;
-    width: 85vw;
-    text-align: center;
-    padding: 5px;
-    
-}
-.box>h1{
-    font-family: 'Lucida Grande';
-    font-size: 4vw;
-    margin-bottom: 2vh;
-    height: 0.2vh;
-}
-.box>p{
-    margin: 70px;
-    font-size: 1vw;
-}
-.box a{
-    text-decoration: none;
-    color: black;
-}
-.botão{
-    margin: 50px;
-    border: 4px solid #000a18;
-    max-width: 50vw;
-    min-width: 30vw;
-    height: 10%;
-    color: #f4f6fc;
-    background-color: #00132d;
-    font-size: 1vw;
-    border-radius: 50px;
-}
-.box button:hover{
-cursor: pointer;
-background-color:  #000a18;
-}
-body{
-    background-color: #00132d;
-}
-
-.scroll-container{
-    display: flex;
-    margin-top: 3vh;
-    overflow: auto;
-    white-space: nowrap;
+/* Menu suspenso (dropdown) */
+.dropdown-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 90px;
+    right: 20px;
+    background-color: #000706;
     padding: 10px;
-    height: 78vh;
+    border: 1px solid #f4f6fc;
 }
-.content-container {
-    margin:5vw 5vh 5vw 5vh;
+
+.dropdown-menu button {
+    margin: 10px 0;
+    width: 100%;
+}
+
+#title {
+    font-size: 5rem;
+    text-transform: uppercase;
+    color: #f4f6fc;
+}
+
+#logo {
+    object-fit: cover;
+    width: 8vw;
+    min-width: 50px;
+}
+
+.button-container {
+    display: flex;
+    align-items: center;
+}
+
+.header-button {
+    background-color: #f4f6fc;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1vw;
+    max-width: 150px;
+    max-height: 150px;
+    margin: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center; /* Centraliza o texto */
+}
+
+.header-button:hover {
+    cursor: pointer;
+    background-color: rgb(189, 188, 188);
+}
+
+header a{
+    text-decoration: none;
+}
+
+.user {
+    font-size: 4vw;
+    padding: 10px;
+    
+}
+
+.user button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f4f6fc;
+    font-size: 1vw;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    flex-direction: column;
+}
+
+.user button:hover {
+    cursor: pointer;
+    background-color: rgb(189, 188, 188);
+}
+
+.box {
+    margin: 20px auto;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: #f4f6fc;
+    max-width: 90vw;
+    min-width: auto;
+    height: auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.box h1 {
+    font-size: 3vw;
+    margin-bottom: 10px;
+}
+
+.box p {
+    margin: 20px;
+    font-size: 1vw;
+}
+
+.botão {
+    margin: 50px;
+    border: 4px solid #000a18;
+    width: 60vw;
+    max-width: 400px;
+    height: auto;
+    color: #f4f6fc;
+    background-color: #00132d;
+    font-size: 2vw;
+    border-radius: 50px;
+}
+
+.box button:hover {
+    cursor: pointer;
+    background-color: #000a18;
+}
+
+.scroll-container {
+    display: flex;
+    margin-top: 2vh;
+    overflow: auto;
+    white-space: nowrap;
+    padding: 5px;
+    height: 100%;
+}
+
+.content-container {
+    margin: 5vw 5vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
     max-width: 600px;
     padding: 5px;
 }
-.content-container h3{
+
+.content-container h3 {
     color: #002452;
     font-size: 2rem;
 }
-.content-container p{
+
+.content-container p {
     margin: 0;
-    font-size: 1.2rem;
-    white-space:normal;
-    width: 95%;
+    font-size: 1rem;
+    white-space: normal;
     text-align: justify;
-    }
-.image-container a>img{
-    max-height: 300px;
+}
+
+.image-container a > img {
+    max-height: 30vh;
     border-radius: 5px;
     border: 4px solid black;
-    display: block;
-    align-self: center;
+}
 
-}
-.image-container {
-    
-    display: flex;
-    align-items: center;
-}
-.canal img{
+.canal img {
     margin: 5%;
     border-radius: 50%;
     border: 4px solid black;
 }
-.text-container{
+
+.text-container {
     margin-top: 3%;
     text-align: center;
 }
 
 .favorite {
-    border:2px;
+    border: none;
     padding: 0;
     width: 0;
     height: 0;
-    border: none;
-    font-size: 0;
     cursor: pointer;
     margin-right: 60px;
     filter: grayscale(100%);
     transition: color 0.7s, filter 0.7s;
 }
+
 .favorite.active {
     filter: grayscale(0%);
+}
+
+/* Media Queries para dispositivos menores */
+@media (max-width: 1000px), (max-height: 540px) {
+    header {
+        width: 100%;
+        justify-content: center;
+        height: auto;
+    }
+    .button-container {
+        display: none; /* Esconde os botões da header */
+    }
+
+    .menu-hamburger {
+        display: flex; /* Mostra o ícone de hambúrguer */
+    }
+
+    /* Mostra o menu suspenso quando o menu é ativado */
+    .menu-hamburger.active + .dropdown-menu {
+        display: flex;
+        justify-content: center;
+        border-radius: 10px;
+    }
+    .box{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .button-container {
+        flex-direction: column; /* Botões ficam um abaixo do outro */
+        margin-top: 10px;
+    }
+
+    #logo {
+        width: 15vw;
+    }
+
+    #title {
+        font-size: 6vw;
+    }
+
+    .header-button {
+        font-size: 4vw;
+        padding: 5px;
+    }
+
+    .user {
+        margin-top: 10px;
+    }
+
+    .user button {
+        width: 100px;
+        height: 100px;
+        font-size: 20px;
+    }
+    .box h1{
+        font-size: 5vw;
+    }
+
+    .scroll-container {
+        flex-direction: column; /* Divs internas empilhadas */
+        height: auto;
+    }
+
+    .content-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 20px 0;
+    }
+
+    .content-container img{
+        width:80vw; 
+        height:40vh;
+        max-width: 300px;
+        max-height: 200px;
+    }
+    .content-container h3{
+        font-size:5vw ;
+    }
+
+    .botão {
+        font-size: 5vw;
+        width: 80vw;
+    }
+
+    .box p {
+        font-size: 0.9rem;
+    }
+    
 }

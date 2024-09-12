@@ -8,17 +8,46 @@
     <link rel="stylesheet" href="login.css">
     <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, max-scale=1.0">
+    <style>
+        /* Estiliza a largura e altura da barra de rolagem */
+        ::-webkit-scrollbar {
+            width: 10px; /* Largura da barra vertical */
+            height: 10px; /* Altura da barra horizontal */
+        }
+
+        /* Estiliza o fundo da barra de rolagem */
+        ::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.6);/* Cor do fundo da barra */
+        }
+
+        /* Estiliza a parte de rolagem da barra */
+        ::-webkit-scrollbar-thumb {
+            background: blue; /* Cor da parte rolável */
+        }
+
+        /* Estiliza a parte de rolagem ao passar o mouse */
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555; /* Cor ao passar o mouse */
+        }
+
+        /* Estilo para uma div de exemplo */
+    </style>
 </head>
 
 <body>
     <header>
-        <img id="logo" src="/images/logo.png">
+        <img id="logo" src="images/logo.png">
             <h2 id="title">EHSYNC</h2>
             <span class="button-container">
                     <span class="user">
-                <a href="/user.html"><button><img src="/images/user.png" width="70px" height="80px" >
+                <a href="user.php"><button><img src="images/user.png" width="70%" height="80%" >
                     User</button></a>
                 </span>
+                <div class="menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
             </span>
     </header>
 
@@ -34,22 +63,28 @@
                 <input type="checkbox" id="chk" aria-hidden="true">
         
                     <div class="signup">
-                        <form>
-                            <label for="chk" aria-hidden="true">Sign up</label>
-                            <input type="text" name="txt" placeholder="User name" required="">
+                        <form action="form.php" method="POST">
+                            <label for="chk" aria-hidden="true">Cadastro</label>
+                            <input type="text" name="nome" placeholder="Nome de Usuário" required="">
                             <input type="email" name="email" placeholder="Email" required="">
                             <input type="date" name="data_nascimento" placeholder="" required="">
                             <input type="password" name="pswd" placeholder="Password" required="">
-                            <button>Sign up</button>
+                            <span class="radio">
+                                <span>Professor<input type="radio" name="cargo" value="Professor" required></span>
+                                <span>Aluno<input type="radio" name="cargo" value="Aluno" required></span>
+                            </span>
+                            <input type="submit" name="submit" id="submit">
                         </form>
                     </div>
         
                     <div class="login">
-                        <form>
+                        <form action="testeLogin.php" method="POST">
                             <label for="chk" aria-hidden="true">Login</label>
-                            <input type="email" name="email" placeholder="Email" required="">
-                            <input type="password" name="pswd" placeholder="Password" required="">
-                            <button>Login</button>
+                            <input class="dark" type="email" name="email" placeholder="Email" required="">
+                            <input class="dark" type="password" name="pswd" placeholder="Password" required="">
+                            <a href="#"><p id="forgotpswd">Esqueceu sua senha?</p></a>
+                            
+                            <input type="submit" name="submit" id="submit">
                         </form>
                     </div>
             </div>
