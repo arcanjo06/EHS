@@ -81,7 +81,6 @@ header {
     font-size: 1vw;
     max-width: 150px;
     max-height: 150px;
-    margin: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -109,8 +108,8 @@ header a{
     justify-content: center;
     background-color: #f4f6fc;
     font-size: 1vw;
-    width: 130px;
-    height: 130px;
+    width: 110px;
+    height: 110px;
     border-radius: 50%;
     flex-direction: column;
 }
@@ -128,7 +127,7 @@ header a{
     max-width: 90vw;
     min-width: auto;
     height: auto;
-    padding: 20px;
+    padding: 25px;
     text-align: center;
 }
 
@@ -169,13 +168,14 @@ header a{
 }
 
 .content-container {
-    margin: 5vw 5vh;
+    margin: 10vw 5vh;
     display: flex;
+    height: auto;
     flex-direction: column;
     align-items: center;
     text-align: center;
     max-width: 600px;
-    padding: 5px;
+    padding: 10px;
 }
 
 .content-container h3 {
@@ -191,7 +191,8 @@ header a{
 }
 
 .image-container a > img {
-    max-height: 30vh;
+    max-height: 400px;
+    max-width: 600px;
     border-radius: 5px;
     border: 4px solid black;
 }
@@ -213,7 +214,7 @@ header a{
     width: 0;
     height: 0;
     cursor: pointer;
-    margin-right: 60px;
+    margin-right: 70px;
     filter: grayscale(100%);
     transition: color 0.7s, filter 0.7s;
 }
