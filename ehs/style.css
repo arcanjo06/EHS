@@ -76,14 +76,20 @@ header {
 
 .header-button {
     background-color: #f4f6fc;
-    padding: 10px;
+    padding: 20px;
     border-radius: 5px;
     font-size: 1vw;
-    max-width: 150px;
-    max-height: 150px;
+    text-wrap: nowrap;
+    max-width:90px;
+    max-height: 90px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin:10px;
+}
+.header-button img{
+    width: 100%;
+    height: 100%;
 }
 
 .header-button:hover {
@@ -108,11 +114,16 @@ header a{
     justify-content: center;
     background-color: #f4f6fc;
     font-size: 1vw;
-    width: 110px;
-    height: 110px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
     flex-direction: column;
 }
+.user button img{
+    width: 60%;
+    height: 70%;
+}
+
 
 .user button:hover {
     cursor: pointer;
@@ -160,7 +171,7 @@ header a{
 
 .scroll-container {
     display: flex;
-    margin-top: 2vh;
+    margin-top: 0.3vh;
     overflow: auto;
     white-space: nowrap;
     padding: 5px;
@@ -168,7 +179,7 @@ header a{
 }
 
 .content-container {
-    margin: 10vw 5vh;
+    margin: 10vw 3vh;
     display: flex;
     height: auto;
     flex-direction: column;
